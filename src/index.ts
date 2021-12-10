@@ -6,10 +6,11 @@ dotenv.config()
 app.use(express.json())
 
 
+
 //Routes
 import {Authrouter} from "./routes/auth"
 
-app.use('/api',Authrouter)
+app.use('/api/auth',Authrouter)
 //Middleware
 
 
@@ -22,9 +23,9 @@ app.get('/', (req, res) => {
 
 //Error Handler
 import { notFound } from "./middleware/notFound";
-import {errorHandlerMiddleware} from "./middleware/errorHandler"
+import { errorHandler } from "./middleware/errorHandler";
 app.use(notFound)
-app.use(errorHandlerMiddleware)
+app.use(errorHandler)
 
 
 
@@ -37,6 +38,7 @@ const start = async () => {
         console.log(`Server is listening on port ${port}...`)
       );
     } catch (error) {
+      console.log('A')
       console.log(error);
     }
   };
