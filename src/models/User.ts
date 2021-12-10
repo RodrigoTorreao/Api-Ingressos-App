@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose"
+import {genSalt, hash} from 'bcryptjs'
 
 
 
@@ -15,6 +16,7 @@ const schema = new Schema<User>({
     role: { type: String, enum: ['empresa', 'usuario'], default:'usuario' },
     eventos:[{type: Object }]
 });
+
 
 const UserModel = model<User>('User', schema)
 
