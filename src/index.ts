@@ -5,10 +5,11 @@ const app = express()
 dotenv.config()
 app.use(express.json())
 
+
 //Routes
+import {Authrouter} from "./routes/auth"
 
-
-
+app.use('/api',Authrouter)
 //Middleware
 
 
@@ -21,8 +22,9 @@ app.get('/', (req, res) => {
 
 //Error Handler
 import { notFound } from "./middleware/notFound";
+import {errorHandlerMiddleware} from "./middleware/errorHandler"
 app.use(notFound)
-
+app.use(errorHandlerMiddleware)
 
 
 
