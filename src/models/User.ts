@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose"
-import {genSalt, hash} from 'bcryptjs'
+import {compare} from 'bcryptjs'
 
 
 
@@ -19,5 +19,6 @@ const schema = new Schema<User>({
 
 
 const UserModel = model<User>('User', schema)
+
 
 export{UserModel}

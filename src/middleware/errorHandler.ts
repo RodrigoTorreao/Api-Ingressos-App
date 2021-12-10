@@ -6,7 +6,7 @@ import { CustomError } from "../error/customError";
 const errorHandler = (err:any, req:Request, res:Response, next:NextFunction) => {
   let customError = {
     // set default
-    statusCode: err.statusCode || 500,
+    statusCode: err.code || 500,
     msg: err.message || 'Something went wrong try again later'
   }
 
