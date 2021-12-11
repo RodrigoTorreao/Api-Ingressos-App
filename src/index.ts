@@ -13,7 +13,7 @@ import {eventosRouter} from './routes/eventos'
 import { auth } from "./middleware/auth"
 
 app.use('/api/auth', Authrouter)
-app.use('/api/', eventosRouter)
+app.use('/api/eventos', eventosRouter)
 
 
 app.get('/', (req, res) => {
