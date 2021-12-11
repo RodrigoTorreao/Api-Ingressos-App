@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { nextTick } from "process";
 import { register, login } from "../controllers/auth";
 
 const Authrouter = Router()

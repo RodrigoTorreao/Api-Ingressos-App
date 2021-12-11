@@ -9,11 +9,11 @@ app.use(express.json())
 
 //Routes
 import {Authrouter} from "./routes/auth"
+import {eventosRouter} from './routes/eventos'
+import { auth } from "./middleware/auth"
 
-app.use('/api/auth',Authrouter)
-//Middleware
-
-
+app.use('/api/auth', Authrouter)
+app.use('/api/eventos', eventosRouter)
 
 
 app.get('/', (req, res) => {
