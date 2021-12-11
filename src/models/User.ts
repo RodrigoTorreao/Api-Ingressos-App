@@ -13,7 +13,7 @@ const schema = new Schema<User>({
     name: { type: String, required:[true, 'Nome não informando'], unique:true},
     password: { type: String, required:[true, 'Senha não informada']},
     role: { type: String, enum: ['empresa', 'usuario'], default:'usuario' },
-    eventos:[{type: Object }]
+    eventos:[{type: Object}]
 });
 
 
