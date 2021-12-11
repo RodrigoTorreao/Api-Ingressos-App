@@ -10,15 +10,12 @@ app.use(express.json())
 //Routes
 import {Authrouter} from "./routes/auth"
 import {eventosRouter} from './routes/eventos'
-import { auth } from "./middleware/auth"
+import {userRouter} from './routes/user'
 
 app.use('/api/auth', Authrouter)
 app.use('/api/eventos', eventosRouter)
+app.use('/api/user', userRouter)
 
-
-app.get('/', (req, res) => {
-    res.send('Ola, mundo')
-})
 
 
 //Error Handler
