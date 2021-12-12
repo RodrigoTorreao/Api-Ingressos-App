@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  ingresso-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ingressoApp
+    expose:
+      - 5000
+    ports:
+      - 5000:5000
+    command: npm start
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=rodrigo
+      - MONGO_INITDB_ROOT_PASSWORD=rodrigo
+    volumes:
+      - mongo-db:/data/db
+
+volumes:
+  mongo-db:
