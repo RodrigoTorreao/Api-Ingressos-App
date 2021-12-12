@@ -11,11 +11,12 @@ app.use(express.json())
 import {Authrouter} from "./routes/auth"
 import {eventosRouter} from './routes/eventos'
 import {userRouter} from './routes/user'
+import {stripeRouter} from './routes/stripeWebHook'
 
 app.use('/api/auth', Authrouter)
 app.use('/api/eventos', eventosRouter)
 app.use('/api/user', userRouter)
-
+app.use('/api/stripe', stripeRouter)
 
 
 //Error Handler
@@ -35,7 +36,6 @@ const start = async () => {
         console.log(`Server is listening on port ${port}...`)
       );
     } catch (error) {
-      console.log('A')
       console.log(error);
     }
   };
