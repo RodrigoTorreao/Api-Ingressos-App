@@ -6,7 +6,7 @@ Api de um sistema de ingressos, criada usando mongo db e express. Permite a cria
 
 ## Registro e Login de Usuário
 
-**Registrar**
+### Registrar
 	
 
     
@@ -18,7 +18,7 @@ Api de um sistema de ingressos, criada usando mongo db e express. Permite a cria
 	    JSON {token:jwt Token}
 
 
-**Login**
+### Login
   
 
   
@@ -34,8 +34,8 @@ Api de um sistema de ingressos, criada usando mongo db e express. Permite a cria
 ## Eventos
 
 
-**Criar**
-	Exclusivo para usuários com  role: empresa
+### Criar
+Exclusivo para usuários com  role: empresa
 	
     Headers:
 	    Authorization: Bearer JWT_TOKEN
@@ -47,8 +47,8 @@ Api de um sistema de ingressos, criada usando mongo db e express. Permite a cria
 	    JSON {msg: Criado}
 
 
-**Editar**
-	Exclusivo para o criador do evento
+### Editar
+Exclusivo para o criador do evento
 	
     Headers:
 	    Authorization: Bearer JWT_TOKEN
@@ -60,8 +60,8 @@ Api de um sistema de ingressos, criada usando mongo db e express. Permite a cria
 	    JSON {evento}
 
 
-**Deletar**
-	Exclusivo para o criador do evento
+### Deletar
+Exclusivo para o criador do evento
 	
     Headers:
 	    Authorization: Bearer JWT_TOKEN
@@ -72,7 +72,7 @@ Api de um sistema de ingressos, criada usando mongo db e express. Permite a cria
 	    JSON {msg: Evento deletado}
 	   
 
-**Buscar**
+### Buscar
 
     Request:
 	    POST URL/api/eventos?name=Nome_do_Evento
@@ -84,7 +84,7 @@ Api de um sistema de ingressos, criada usando mongo db e express. Permite a cria
 
 
 ## Comprar e Eventos Comprados
-**Comprar**
+### Comprar
 	
     Headers:
 	    Authorization: Bearer JWT_TOKEN
@@ -97,7 +97,7 @@ Api de um sistema de ingressos, criada usando mongo db e express. Permite a cria
 	    JSON {link: Link para o pagamento}
 
 
-**Eventos comprados pelo Usuário**
+### Eventos comprados pelo Usuário
 	
     Headers:
 	    Authorization: Bearer JWT_TOKEN
