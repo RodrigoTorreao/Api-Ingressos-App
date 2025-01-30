@@ -1,6 +1,6 @@
-# Mb-Desafio
+# Ingressos App
 # Sobre
-Api de um sistema de ingressos, criada usando mongo db e express. Permite a criação/Login de usuários, CRUD de eventos e a sua compra
+Api de um sistema de ingressos, criada usando Express js e MongoDb. Permite a criação/Login de usuários, CRUD de eventos além de sistema de pagamento através da integração com api de terceiros (Stripe)
 
 
 
